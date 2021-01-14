@@ -19,4 +19,6 @@ GNU/Linux日常使用与修锅指南, 一个面向潜在GNU/Linux用户的分享
 - 做为用户, 发现潜在的问题, 帮助定位问题, 提出可能的改进,甚至帮助推广 都是可以做的贡献. 不一定非要写个patch给其他网友用才算回报社区.
 
 
+## license
 
+The content in this repository is provided under the **CC0** license.  
