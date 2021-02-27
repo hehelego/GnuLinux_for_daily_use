@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usepackage{xeCJK}
+\usepackage{hyperref}
+
+\title{GNU/Linux for daily use}
+\author{spinach/hehelego@Shanghai Tech}
+\date{\today}
+
+\setCJKmathfont{Noto Sans CJK SC}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage{}
+	\footnote{ The following content is provided under the \textbf{CC0 Lincense} and \href{https://github.com/hehelego/GnuLinux_for_daily_use}{\color{blue}{available on github}}. }
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{这是什么\quad About}
+\end{frame}
+
+\begin{frame}
+	So, Let's get started
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{GNU/Linux,\ a brief introduction}
+\end{frame}
+
+\begin{frame}
+	\frametitle{GNU/Linux, for daily use}
+\end{frame}
+
+\begin{frame}
+	\frametitle{GNU/Linux, for daily use}
+\end{frame}
+
+\begin{frame}
+	\frametitle{GNU/Linux, beginner's guide}
+\end{frame}
+
+\begin{frame}
+	WARNING: the rest of this slides may contain unconventional content.
+\end{frame}
+
+\begin{frame}
+	\frametitle{random thoughts on FOSS}
+\end{frame}
+
+\begin{frame}
+	\frametitle{reference \& resources}
+	omitted
+\end{frame}
+
+\end{document}
