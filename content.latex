@@ -1,6 +1,8 @@
 \documentclass[titlepage]{article}
 \usepackage[PunctStyle=banjiao]{xeCJK}
+\setCJKsansfont{Noto Sans CJK SC}
 \setCJKmainfont{Noto Serif CJK SC}
+\setCJKmathfont{Noto Serif CJK SC}
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
 \usepackage{enumitem}
@@ -21,13 +23,15 @@
 	urlcolor=cyan,
 	citecolor=cyan,
 }
-\begin{document}
+\usepackage[margin=0.2cm]{geometry}
 
-\title{\includegraphics[scale=0.3]{gnulinux-logo.png}\\ GNU/Linux for daily use}
+
+\title{{\includegraphics[scale=0.3]{gnulinux-logo.png}}\\ {GNU/Linux for daily use}}
 \author{spinach/hehelego}
 \date{\today}
-\maketitle
 
+\begin{document}
+\maketitle
 
 \section*{这是什么}
 
@@ -112,8 +116,15 @@ kernel还会管理进程,控制其状态转换,管理调度,并提供IPC.\par
 
 \subsection*{为什么(现在)你会想要使用GNU/Linux}
 
-在上一个section中,我们钦定GNU/Linux是适合日常办公学习;
-并且,可以在其上轻松搭建开发者,内容创作者,系统维护者所需的环境.
+\sout{在上一个section中,我们钦定GNU/Linux是适合日常办公学习;}\\
+\sout{并且,可以在其上轻松搭建开发者,内容创作者,系统维护者所需的环境.}
+
+\begin{itemize}[itemsep=0pt]
+	\item 100 percent controllable
+	\item 100 percent customizable
+	\item embrace FOSS,community driven,decentralized
+	\item for fun, for working efficiently, or for anything.
+\end{itemize}
 
 
 \subsection*{为什么(现在)你可以完全使用GNU/Linux}
