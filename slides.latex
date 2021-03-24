@@ -1,5 +1,6 @@
 \documentclass[8pt,t]{beamer}
 
+
 \usepackage[PunctStyle=banjiao]{xeCJK}
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmainfont{Noto Serif CJK SC}
@@ -70,6 +71,7 @@
 	当然这次分享不可避免地,会有一些GNU/Linux相关的基础介绍和使用技巧.
 
 	\vspace{15em}
+	\pause
 
 	有些东西并不是那么难,只是你需要一个契机.\\
 	让你意识到: 它很好玩,开始玩它并没有什么门槛.\\
@@ -98,6 +100,11 @@
 		\end{itemize}
 	\end{block}
 
+	\pause
+	\centering{
+		\sout{The outline is omitted}\\
+		``反复翻看目录的,不是真正的读者.''
+	}
 \end{frame}
 
 
@@ -153,6 +160,36 @@
 	\end{block}
 
 	\pause
+
+	\begin{alertblock}{听说有锅啊}
+		\begin{itemize}
+			\item 安装光盘去哪里买啊;光驱怎么搞啊?
+			\item 装啥都make,make install,自己编译自己管理依赖,麻烦死了;没源码装不了啊?
+			\item 硬件兼容性不好,适配不好,屏幕撕裂,分辨率不可调?
+			\item 动不动就kernel panic,稳定使用怎么可能?
+			\item 出锅都要自己hack,而且完全没有中文资料,劝退
+			\item \dots
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{GNU/Linux, for daily use\quad (Cont'd)}
+
+	\begin{block}{大人,时代变了!}
+		naive 不要听风就是雨.
+		\begin{itemize}
+			\item 无脑安装,开箱即用, 有手就行.
+			\item 系统维护,硬件驱动,GUI;安装,配置,使用? 认准apt/dnf/pacman.
+			\item LTS,rc,hacked kernel随便选,甚至还能稳定+新特性全都要.
+			\item arch wiki, stackexchange, github 三板斧,修复99\%的锅.
+			\item \dots
+		\end{itemize}
+	\end{block}
+
+	\pause
+	\vfill
+
 	\begin{block}{可否? 使用GNU/Linux}
 		\begin{itemize}
 			\item 激进或稳定的kernel,均可满足
@@ -162,23 +199,6 @@
 		\end{itemize}
 		It is fine to stay with GNU/Linux.
 	\end{block}
-
-\end{frame}
-
-\begin{frame}
-	\frametitle{GNU/Linux, for daily use\quad (Cont'd)}
-	\begin{alertblock}{听说有锅啊}
-		
-	\end{alertblock}
-	\begin{examples}{听说有锅啊}
-	\end{examples}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-	\frametitle{GNU/Linux, beginner's guide}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,7 +206,45 @@
 
 \begin{frame}[c]
 	\centering
-	\alert{WARNING}: the rest of this slides may contain unconventional,personal opinion.
+	\Large{GNU/Linux, a first glance}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{GNU/Linux, beginner's guide\quad 安装和基础配置}
+\end{frame}
+
+\begin{frame}
+	\frametitle{GNU/Linux, beginner's guide\quad 常规操作教程}
+\end{frame}
+
+\begin{frame}[c]
+	\center{
+		\Large{\alert{NOTICE}: don't miss the crucial part of this lecture}
+		\vfill
+		\Large{GNU/Linux, beginner's guide--如何获取帮助与支持}
+	}
+\end{frame}
+\begin{frame}
+	\frametitle{1.\ information gathering}
+\end{frame}
+\begin{frame}
+	\frametitle{2.\ requesting for support}
+\end{frame}
+\begin{frame}
+	\frametitle{3.\ hacking!}
+\end{frame}
+\begin{frame}
+	\frametitle{$\infty$\ recording \& sharing}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]
+	\centering
+	\Large{\alert{WARNING}: may contain unconventional,personal opinion.}
 \end{frame}
 
 \begin{frame}
@@ -198,11 +256,12 @@
 
 \begin{frame}[c]
 	\frametitle{reference \& resources}
-	\centering omitted. See \href{https://github.com/hehelego/GnuLinux_for_daily_use/blob/main/content.latex}{link}.
+	\centering
+	\Large{omitted. See \href{https://github.com/hehelego/GnuLinux_for_daily_use/blob/main/content.latex}{link}.}
 \end{frame}
 
 \begin{frame}[c]
-	\centering \huge Q\&A
+	\centering \huge{Q\&A}
 \end{frame}
 
 \end{document}
