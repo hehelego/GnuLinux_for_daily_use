@@ -1,0 +1,323 @@
+\documentclass[8pt,t]{beamer}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+
+\usepackage{minted}
+\setlength{\parindent}{2em}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{ulem}
+\newcommand{\passthrough}[1]{#1}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=cyan,
+	filecolor=cyan,
+	urlcolor=cyan,
+	citecolor=cyan,
+}
+
+% metadata
+\date{\today}
+\title{一些我觉得有用的工具和方法}
+\author{spinach/hehelego}
+\institute{GeekPie@ShanghaiTech}
+
+% beamer settings
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\RequirePackage{geometry}
+\setbeamersize{text margin left=.3cm}
+\setbeamersize{text margin right=.3cm}
+\setbeamerfont{footnote}{size=\tiny}
+
+\begin{document}
+
+
+\begin{frame}
+	\titlepage{}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sample}
+
+	In this slide, some important text will be\footnote{footnote will be here}
+	\alert{highlighted} because it's important.
+	Please, don't abuse it.
+
+	\begin{block}{Remark}
+		Sample text
+	\end{block}
+
+	\begin{alertblock}{Important theorem}
+		Sample text in red box
+	\end{alertblock}
+
+	\vfill
+
+	\begin{examples}
+		Sample text in green box. The title of the block is ``Examples''.
+	\end{examples}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{声明}
+	\begin{itemize}
+		\item 如标题所言, 只是介绍一些我认为有用的, 我自己经常使用的工具.\\
+		\item 如果您发现我介绍的某个工具/某种技术在您的平台没有官方支持.
+		\item 如果您发现我口胡的某个理论有明显谬误.
+		\item 如果您发现我的讲述方式过于不友好.
+		\item 如果您发现我在浪费您的时间.
+		\item $\cdots$
+	\end{itemize}
+	\pause{}
+	请您务必及时联系我, 指出问题所在, 我会尽快进行修正\\
+	因为我非常重视我的产出的质量, 尤其是公开于其他人的内容.\\
+	\sout{欢迎来打爆我qwq...QQ,微信平台除外}
+	\vfill{}
+	\pause{}
+	\begin{center}
+		So, Let's get started\\
+	\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{fish shell + python + GNU coreutils}
+	\begin{block}{这是什么}
+		是工作环境的基础,
+		是整个系统暴露给我们的接口, 通过它们进行各种操作.\\
+
+		\begin{itemize}
+			\item fish: \textcolor{red}{f}riendly \textcolor{red}{i}nteractive \textcolor{red}{sh}ell\\
+			      \begin{itemize}
+				      \item sematic colorizing (path, command, option, varibles)
+				      \item intuitive syntax\&commands
+				      \item suggestions\&completion
+				      \item \emph{work out of the box}
+			      \end{itemize}
+			\item python: a \href{https://www.python.org/dev/peps/pep-0020/}{Beautiful,Explicit,Simple,Sparse} programming language\\
+			      \href{https://www.python.org/}{that lets you work quickly and integrate systems more effectively}
+			      \begin{itemize}
+				      \item suitable for scripting (automatically perform tasks for human).
+				      \item well-developed eco-system for nearly every field.
+				      \item get support from powerful\&friendly python users everywhere.
+			      \end{itemize}
+			\item GNU coreutils: ls, rm, mkdir, cat, tee $\ldots$
+		\end{itemize}
+	\end{block}
+
+	\begin{examples}
+		这怎么用?
+	\end{examples}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{trash-cli}
+
+	\begin{alertblock}{terrible (but common) cases}
+		\begin{minted}{fish}
+rm ~/secret-donot-let-the-TAs-know/spinach-cs100-hw-source.tar.gz
+rm ~ /secret-donot-let-the-TAs-know/spinach-cs101-hw-source.tar.gz
+		\end{minted}
+	\end{alertblock}
+
+	\vfill
+
+	\begin{examples}
+		\begin{minted}{fish}
+alias rm="trash"
+		\end{minted}
+
+		{\scriptsize{
+			\begin{itemize}
+				\item Delete a file (send to trash): \mint{fish}|trash path/to/file|
+				\item List files in trash: \mint{fish}|trash-list|
+				\item Restore file from trash: \mint{fish}|trash-restore|
+				\item Empty trash: \mint{fish}|trash-empty|
+				\item Empty trash, keeping files trashed less than $10$ days ago: \mint{fish}|trash-empty 10|
+				\item Remove all files named \texttt{`foo'} from the trash: \mint{fish}|trash-rm foo|
+				\item Remove all files with a given original location: \mint{fish}|trash-rm /absolute/path/to/file_or_directory|
+			\end{itemize}
+		}}
+	\end{examples}
+
+	futher: \textbf{btrfs} subvolumn snapshot
+\end{frame}
+
+\begin{frame}
+	\frametitle{git: \sout{a version control software} the distributed version control system}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{broot/ranger}
+	\sout{explorere.exe in your terminal emulator}
+	\begin{block}{what is broot/ranger}
+		\begin{itemize}
+			\item ranger: A simple vim-like TUI file manager
+			\item broot: fuzzy search path + tree view + quick cd
+		\end{itemize}
+	\end{block}
+
+
+	\vfill
+
+	\begin{examples}
+		效果如图所示.
+	\end{examples}
+\end{frame}
+
+\begin{frame}
+	\frametitle{fzf + rg/ag}
+	\begin{block}{what is fzf, rg, ag}
+		\begin{itemize}
+			\item fzf: \textcolor{red}{F}uzzy \textcolor{red}{F}ile \textcolor{red}{F}inder
+			\item rg: rip grep. Search for matched patterns.
+			\item ag: the silver searcher. Code Searching tool.
+		\end{itemize}
+	\end{block}
+
+
+	\vfill
+
+	\begin{examples}
+		效果如图所示.
+	\end{examples}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{(neo) vim\footnote{or emacs, xray} \sout{a editor} the editor!}
+
+	\begin{block}{features}
+		\begin{itemize}
+			\item multiple editing modes (insert, normal, visual $\ldots$ up to 12 modes)
+			\item customizability (builtin \texttt{vimscript/lua} VM + python/node.js/ruby RPC)
+			\item lightweight
+			\item strong community support
+		\end{itemize}
+	\end{block}
+
+	\vfill
+	\begin{alertblock}{No more MS visual studio code}
+		\begin{itemize}
+			\item Microsoft Visual Studio Code.  $(\times)$
+			\item vscode Code-OSS $(\surd)$
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]
+	\centering \huge {\textcolor{red}{Do not miss the KEY part of this lecture}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{TL;DR pages}
+	\begin{block}{What is TL;DR pages}
+		Simplified and community-driven man pages
+		\begin{itemize}
+			\item ``TL;DR'' stands for \emph{too long; don't read} or 太长不看 in Chinese.
+			\item \href{https://tldr.sh/}{tldr.sh} is the official site for TL;DR pages project.
+		\end{itemize}
+	\end{block}
+
+
+	\vfill
+	\begin{examples}
+		DFS
+		\begin{enumerate}
+			\item \mint{fish}|tldr systemd-timesyncd|
+			\item \mint{fish}|man systemd-timesyncd|
+			\item \mint{fish}|curl https://www.google.com/?q=systemd-timesyncd|
+		\end{enumerate}
+	\end{examples}
+\end{frame}
+
+\begin{frame}
+	\frametitle{search engines}
+	\begin{block}{effective searching tips}
+		\begin{itemize}
+			\item search by *\emph{keywords}*\\
+				\sout{使用搜索引擎就是查字典, 你难道和字典讲自然语言吗}
+			\item use the advanced filtering commands
+			\item take advantages over vertical search and in-site search
+		\end{itemize}
+	\end{block}
+
+	\vfill
+
+	\begin{examples}
+		呜呜, 我的kernel挂了. 你能帮帮我吗qwq.
+	\end{examples}
+
+	\vfill
+
+	\begin{block}{Troubleshooting: how-to}
+		\begin{enumerate}
+			\item information gathering
+			\item fix it your self?
+			\item requesting for support
+			\item hacking!
+			\item \(\infty\) \emph{recording \& sharing}
+		\end{enumerate}
+	\end{block}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{A few more things \sout{你们还是另请高明吧}}
+	\begin{block}{(personally) recomendedd applications}
+		\begin{itemize}
+			\item i3wm, bspwm
+			\item rofi
+			\item tmux
+			\item graphviz
+			\item surfing keys / vimnium
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{resources}
+		\begin{itemize}
+			\item wikipedia
+			\item stackexchange
+			\item github
+			\item arch linux community wiki
+		\end{itemize}
+	\end{block}
+
+	\begin{itemize}
+		\item 每个人都缺乏``对于自己不熟悉的领域的常识''
+		\item 知道该搜索什么, 哪些关键词是与自己手头的问题相关的, 是相当重要并且市场被忽略的.
+		\item 实用优先于意识形态, 但不可消灭意识形态.
+		\item 优质教程和文档本该存在, 因为它们帮助项目吸引users和collaborators, 你要做的只是找到这些东西,并且跟随它即可.
+	\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]
+	\centering \huge{Q\&A}\footnote{
+		这次的内容过少,准备不足.效果不佳.\quad 故不会放在github上面.也不会在任何地方发布/分发.\\
+		\href{github.com/hehelego/}{Follow me on github}.\\
+		We warmly welcome further discussion/error correction/suggestions.
+		}
+\end{frame}
+\end{document}
